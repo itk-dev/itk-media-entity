@@ -1,0 +1,37 @@
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_itk_media_height
+    - field.field.media.image.field_itk_media_image_upload
+    - field.field.media.image.field_itk_media_mime_type
+    - field.field.media.image.field_itk_media_width
+    - image.style.thumbnail
+    - media_entity.bundle.image
+  module:
+    - image
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  field_itk_media_image_upload:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_itk_media_height: true
+  field_itk_media_mime_type: true
+  field_itk_media_width: true
+  langcode: true
+  uid: true

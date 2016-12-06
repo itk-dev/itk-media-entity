@@ -1,0 +1,33 @@
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_itk_media_file_upload
+    - field.field.media.document.field_itk_media_mime_type
+    - field.field.media.document.field_itk_media_size
+    - media_entity.bundle.document
+  module:
+    - file
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  field_itk_media_file_upload:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_itk_media_mime_type: true
+  field_itk_media_size: true
+  langcode: true
+  uid: true
