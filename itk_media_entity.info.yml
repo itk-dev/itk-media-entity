@@ -2,6 +2,8 @@ name: ITK Media entity
 description: 'An ITK Media entity configuration'
 type: module
 package: ITK
+core: 8.x
+version: 1.0.1
 dependencies:
   - file
   - image
