@@ -5,3 +5,6 @@
 - Added two views (Browsers, Library)
 - Added two browsers (Document, image)
 - Added two media bundles with default fields and config (Document, image)
+
+### v1.0.1
+- Added core requirement to .info.yml
