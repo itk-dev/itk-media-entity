@@ -4,6 +4,10 @@ dependencies:
     - file
     - image
     - media_entity
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 id: media.field_itk_media_image_upload
 field_name: field_itk_media_image_upload
 entity_type: media

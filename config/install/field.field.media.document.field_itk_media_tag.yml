@@ -4,6 +4,11 @@ dependencies:
     - field.storage.media.field_itk_media_tag
     - media_entity.bundle.document
     - taxonomy.vocabulary.media_library
+  module:
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 id: media.document.field_itk_media_tag
 field_name: field_itk_media_tag
 entity_type: media

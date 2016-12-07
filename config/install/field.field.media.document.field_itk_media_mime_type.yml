@@ -3,6 +3,11 @@ dependencies:
   config:
     - field.storage.media.field_itk_media_mime_type
     - media_entity.bundle.document
+  module:
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 id: media.document.field_itk_media_mime_type
 field_name: field_itk_media_mime_type
 entity_type: media

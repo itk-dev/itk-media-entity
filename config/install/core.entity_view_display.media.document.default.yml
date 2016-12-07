@@ -10,6 +10,10 @@ dependencies:
   module:
     - file
     - image
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 id: media.document.default
 targetEntityType: media
 bundle: document

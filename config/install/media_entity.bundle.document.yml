@@ -2,6 +2,10 @@ status: true
 dependencies:
   module:
     - media_entity_document
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 id: document
 label: Document
 description: 'A document to be stored in the media library'

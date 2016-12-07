@@ -12,6 +12,10 @@ dependencies:
     - media_entity
     - taxonomy
     - user
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 id: itk_media_browser
 label: 'ITK media browser'
 module: views
