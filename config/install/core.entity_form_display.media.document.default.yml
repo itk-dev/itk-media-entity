@@ -4,6 +4,7 @@ dependencies:
     - field.field.media.document.field_itk_media_file_upload
     - field.field.media.document.field_itk_media_mime_type
     - field.field.media.document.field_itk_media_size
+    - field.field.media.document.field_itk_media_tag
     - media_entity.bundle.document
   module:
     - file
@@ -18,6 +19,11 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+  field_itk_media_tag:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   name:
     type: string_textfield
     weight: 0

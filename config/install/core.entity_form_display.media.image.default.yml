@@ -4,6 +4,7 @@ dependencies:
     - field.field.media.image.field_itk_media_height
     - field.field.media.image.field_itk_media_image_upload
     - field.field.media.image.field_itk_media_mime_type
+    - field.field.media.image.field_itk_media_tag
     - field.field.media.image.field_itk_media_width
     - image.style.thumbnail
     - media_entity.bundle.image
@@ -21,6 +22,11 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_itk_media_tag:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   name:
     type: string_textfield
     weight: 0

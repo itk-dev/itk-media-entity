@@ -1,0 +1,9 @@
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_library
+id: taxonomy_term.media_library
+target_entity_type_id: taxonomy_term
+target_bundle: media_library
+default_langcode: und
+language_alterable: false

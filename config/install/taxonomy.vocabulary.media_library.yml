@@ -1,0 +1,7 @@
+status: true
+dependencies: {  }
+name: 'Media library'
+vid: media_library
+description: 'A taxonomy to structure your media library'
+hierarchy: 0
+weight: 0
