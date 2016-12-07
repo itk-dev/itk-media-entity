@@ -1,5 +1,8 @@
 #ITK media entity 8.x-1.x
 
+### 1.1.2
+- Added module requirements to config files
+
 ### 1.1.1
 - Modified composer.json
 
