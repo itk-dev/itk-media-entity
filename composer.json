@@ -18,6 +18,6 @@
     "drupal/inline_entity_form": "~1",
     "drupal/media_entity": "~1",
     "drupal/media_entity_document": "~1",
-    "drupal/media_entity_image": "~1",
+    "drupal/media_entity_image": "~1"
   }
 }
