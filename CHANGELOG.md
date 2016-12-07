@@ -1,14 +1,16 @@
 #ITK media entity 8.x-1.x
 
+### 1.1.1
+- Modified composer.json
 
-### v1.1.0
+### 1.1.0
 - Taxonomy for managing files
 - Added view for media library
 
-### v1.0.1
+### 1.0.1
 - Added core requirement to .info.yml
 
-### v1.0.0
+### 1.0.0
 - Added two field bases (Document, image)
 - Added two views (Browsers, Library)
 - Added two browsers (Document, image)
