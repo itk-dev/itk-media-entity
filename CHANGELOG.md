@@ -1,5 +1,8 @@
 #ITK media entity 8.x-1.x
 
+### 1.1.3
+- Added Danish translations to media library pages
+
 ### 1.1.2
 - Added module requirements to config files
 
