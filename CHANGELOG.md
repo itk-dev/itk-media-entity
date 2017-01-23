@@ -1,5 +1,8 @@
 #ITK media entity 8.x-1.x
 
+### 1.1.5
+- Changed translation location
+
 ### 1.1.4
 - Changed translation location
 
