@@ -8,6 +8,8 @@ dependencies:
     - field.field.media.image.field_itk_media_width
     - image.style.thumbnail
     - media_entity.bundle.image
+    - views.view.itk_media
+    - views.view.itk_media_browser
   module:
     - image
     - itk_media_entity
