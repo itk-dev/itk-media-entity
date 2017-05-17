@@ -1,5 +1,10 @@
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 name: 'Media library'
 vid: media_library
 description: 'A taxonomy to structure your media library'
