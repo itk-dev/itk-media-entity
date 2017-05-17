@@ -2,17 +2,17 @@ status: true
 dependencies:
   module:
     - media_entity
-    - node
+    - taxonomy
     - itk_media_entity
   enforced:
     module:
       - itk_media_entity
-id: node.field_media_document
-field_name: field_media_document
-entity_type: node
+id: media.field_itk_media_tag
+field_name: field_itk_media_tag
+entity_type: media
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

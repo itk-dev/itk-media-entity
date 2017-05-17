@@ -3,6 +3,10 @@ dependencies:
   module:
     - entity_browser_entity_form
     - views
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 name: itk_document_browser
 label: 'ITK document browser'
 display: modal

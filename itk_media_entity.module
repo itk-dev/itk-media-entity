@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function itk_media_entity_page_attachments(array &$page) {
+  // Attached custom CSS to the admin pages.
+  $page['#attached']['library'][] = 'itk_media_entity/itk_media_entity';
+}

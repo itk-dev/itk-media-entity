@@ -4,20 +4,25 @@ dependencies:
     - field.field.media.document.field_itk_media_file_upload
     - field.field.media.document.field_itk_media_mime_type
     - field.field.media.document.field_itk_media_size
+    - field.field.media.document.field_itk_media_tag
     - image.style.thumbnail
     - media_entity.bundle.document
   module:
     - file
     - image
+    - itk_media_entity
+  enforced:
+    module:
+      - itk_media_entity
 id: media.document.default
 targetEntityType: media
 bundle: document
 mode: default
 content:
   created:
-    label: hidden
     type: timestamp
     weight: 1
+    label: above
     settings:
       date_format: medium
       custom_date_format: ''
@@ -43,6 +48,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_itk_media_tag:
+    weight: 6
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
   name:
     label: hidden
     type: string
