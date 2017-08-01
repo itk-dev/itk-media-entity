@@ -1,21 +1,21 @@
 status: true
 dependencies:
   config:
+    - field.storage.media.field_itk_media_file_upload
+    - field.storage.media.field_itk_media_image_upload
     - field.storage.media.field_itk_media_tag
     - image.style.thumbnail
     - system.menu.admin
     - taxonomy.vocabulary.media_library
+  enforced:
+    module:
+      - itk_media_entity
   module:
+    - file
     - image
     - media_entity
     - taxonomy
     - user
-    - itk_media_entity
-  enforced:
-    module:
-      - itk_media_entity
-_core:
-  default_config_hash: '-fJpPBLfGRPa6VPFiBweHcjlSOTqltsw5cbz8VVqXAI'
 id: itk_media
 label: 'ITK Media'
 module: views
@@ -49,7 +49,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Filtrér
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -63,6 +63,11 @@ display:
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: '‹ Tidligere'
+            next: 'Næste ›'
+            first: '« Første'
+            last: 'Sidste »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -71,11 +76,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
           quantity: 9
       style:
         type: table
@@ -96,8 +96,8 @@ display:
             changed: changed
             field_itk_media_tag: field_itk_media_tag
             operations: operations
-            title: title
-            title_1: title
+            field_itk_media_file_upload: field_itk_media_image_upload
+            field_itk_media_image_upload: field_itk_media_image_upload
           info:
             media_bulk_form:
               align: ''
@@ -140,21 +140,17 @@ display:
               empty_column: false
               responsive: ''
             operations:
-              sortable: false
-              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            title:
-              sortable: false
-              default_sort_order: asc
+            field_itk_media_file_upload:
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            title_1:
-              sortable: false
+            field_itk_media_image_upload:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -213,6 +209,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          action_title: Handling
+          include_exclude: exclude
+          selected_actions: {  }
           set_precision: false
           precision: 0
           decimal: .
@@ -221,9 +220,6 @@ display:
           format_plural_string: "1\x03@count"
           prefix: ''
           suffix: ''
-          action_title: Action
-          include_exclude: exclude
-          selected_actions: {  }
           entity_type: media
           plugin_id: media_bulk_form
         thumbnail__target_id:
@@ -315,7 +311,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Media name'
+          label: 'Medie navn'
           exclude: false
           element_type: ''
           element_class: ''
@@ -339,18 +335,18 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        bundle:
-          id: bundle
-          table: media_field_data
-          field: bundle
+        field_itk_media_file_upload:
+          id: field_itk_media_file_upload
+          table: media__field_itk_media_file_upload
+          field: field_itk_media_file_upload
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Media type'
+          label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ ''Document''|t }}'
             make_link: false
             path: ''
             absolute: false
@@ -379,7 +375,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -388,10 +384,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -401,8 +396,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: media
-          entity_field: bundle
+          plugin_id: field
+        field_itk_media_image_upload:
+          id: field_itk_media_image_upload
+          table: media__field_itk_media_image_upload
+          field: field_itk_media_image_upload
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Type
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ ''Image''|t }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_url
+          settings:
+            image_style: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           plugin_id: field
         changed:
           id: changed
@@ -411,7 +467,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Updated
+          label: Opdateret
           exclude: false
           alter:
             alter_text: false
@@ -478,7 +534,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Tag
+          label: Mærkat
           exclude: false
           alter:
             alter_text: false
@@ -541,7 +597,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Funktioner
           exclude: false
           alter:
             alter_text: false
@@ -599,7 +655,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: 'Media name'
+            label: 'Medie navn'
             description: ''
             use_operator: false
             operator: name_op
@@ -639,7 +695,7 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: 'Media type'
+            label: 'Medie type'
             description: ''
             use_operator: false
             operator: bundle_op
@@ -680,7 +736,7 @@ display:
           exposed: true
           expose:
             operator_id: field_itk_media_tag_target_id_op
-            label: Tag
+            label: Mærkat
             description: ''
             use_operator: false
             operator: field_itk_media_tag_target_id_op
@@ -728,7 +784,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Media
+      title: Medier
       header: {  }
       footer: {  }
       empty:
@@ -762,18 +818,20 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_itk_media_file_upload'
+        - 'config:field.storage.media.field_itk_media_image_upload'
         - 'config:field.storage.media.field_itk_media_tag'
   media_page_list:
     display_plugin: page
     id: media_page_list
-    display_title: Media
+    display_title: Medier
     position: 1
     display_options:
       display_extenders: {  }
       path: admin/itk-media
       menu:
         type: normal
-        title: Media
+        title: Medier
         description: ''
         expanded: false
         parent: system.admin
@@ -791,4 +849,6 @@ display:
         - user
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_itk_media_file_upload'
+        - 'config:field.storage.media.field_itk_media_image_upload'
         - 'config:field.storage.media.field_itk_media_tag'
