@@ -1,5 +1,5 @@
 {
-  "name": "drupal/itk_media_entity",
+  "name": "itk-dev/itk_media_entity",
   "type": "drupal-module",
   "description": "Provides a plugable configuration setup for drupal media entity",
   "keywords": ["Drupal"],
