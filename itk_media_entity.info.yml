@@ -4,7 +4,7 @@ type: module
 interface translation project: itk_media_entity
 interface translation server pattern: modules/contrib/itk_media_entity/translations/itk-media-entity.%language.po
 package: ITK
-core: 8.x
+core_version_requirement: ^9
 version: 1.1.6
 dependencies:
   - file
