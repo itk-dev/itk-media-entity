@@ -1,3 +1,7 @@
+# NOTE !!
+This module is made absolete after media entity was included in drupal core.
+A version 2.0 has been added that removes all requirements from composer and info file so this module can be disabled without interfering with the project setup.
+
 # About ITK media entity
 
 ITK media entity is an attempt to configure Drupals media setup, to support a simple workflow.
