@@ -1,6 +1,7 @@
 # NOTE !!
 This module is made absolete after media entity was included in drupal core.
 A version 2.0 has been added that removes all requirements from composer and info file so this module can be disabled without interfering with the project setup.
+The version 2.0 should only be used when disabling the module before later removing it completely.
 
 # About ITK media entity
 
