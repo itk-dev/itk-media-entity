@@ -10,5 +10,15 @@
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     }
+<<<<<<< HEAD
   ]
+=======
+  ],
+  "require": {
+    "drupal/core": "^9.0",
+    "drupal/entity": "~1",
+    "drupal/entity_browser": "~1",
+    "drupal/inline_entity_form": "~1"
+  }
+>>>>>>> df682da8ed51a5bc46791c3fd2bb4ae8e9511f3f
 }
