@@ -1,5 +1,5 @@
 {
-  "name": "drupal/itk_media_entity",
+  "name": "itk-dev/itk_media_entity",
   "type": "drupal-module",
   "description": "Provides a plugable configuration setup for drupal media entity",
   "keywords": ["Drupal"],
@@ -10,14 +10,5 @@
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     }
-  ],
-  "require": {
-    "drupal/core": "~8.1",
-    "drupal/entity": "~1",
-    "drupal/entity_browser": "~1",
-    "drupal/inline_entity_form": "~1",
-    "drupal/media_entity": "~1",
-    "drupal/media_entity_document": "~1",
-    "drupal/media_entity_image": "~1"
-  }
+  ]
 }

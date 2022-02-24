@@ -1,19 +1,6 @@
 name: ITK Media entity
 description: 'An ITK Media entity configuration'
 type: module
-interface translation project: itk_media_entity
-interface translation server pattern: modules/contrib/itk_media_entity/translations/itk-media-entity.%language.po
 package: ITK
+core_version_requirement: ^8 || ^9
 core: 8.x
-version: 1.1.6
-dependencies:
-  - file
-  - image
-  - entity_browser
-  - entity_browser_entity_form
-  - views
-  - media_entity
-  - user
-  - node
-  - media_entity_image
-  - media_entity_document
